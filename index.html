@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="colors.js"></script>
+    <script src="script.js"></script>
+    <title>Excel to Chart</title>
+</head>
+
+<body>
+    <div class="container frame">
+        <h1 class="title">Excel to Chart</h1>
+        <input type="file" id="fileInput" class="margin-top">
+        <div id="nameDiv" class="container margin-top"></div>
+        <canvas id="chartCanvas" class="margin-top" width="1200" height="600"></canvas>
+    </div>
+</body>
+
+</html>
