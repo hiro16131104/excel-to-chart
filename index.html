@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs/hammer.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
     <link rel="stylesheet" href="style.css">
     <script src="colors.js"></script>
@@ -14,11 +15,29 @@
 </head>
 
 <body>
-    <div class="container frame">
+    <div class="container-column frame">
         <h1 class="title">Excel to Chart</h1>
-        <input type="file" id="fileInput" class="margin-top">
-        <div id="nameDiv" class="container margin-top"></div>
-        <canvas id="chartCanvas" class="margin-top" width="1200" height="600"></canvas>
+        <input type="file" id="fileInput" class="margin-top file-input">
+        <div id="nameDiv" class="container-column margin-top"></div>
+        <div id="buttonDiv" class="container-row hidden">
+            <button id="displayButton" class="button cursor-pointer">
+                グラフを表示
+            </button>
+            <button id="resetZoomButton" class="button cursor-pointer margin-left" disabled>
+                ズームをリセット
+            </button>
+            <button id="copyButton" class="button cursor-pointer margin-left" disabled>
+                グラフをコピー
+            </button>
+        </div>
+        <div id="rangeDiv" class="container-row hidden">
+            <label for="startDateInput">開始:</label>
+            <input type="datetime-local" id="startDateInput" class="date-input cursor-pointer margin-left" />
+            <label for="endDateInput" class="margin-left">終了:</label>
+            <input type="datetime-local" id="endDateInput" class="date-input cursor-pointer margin-left" />
+            <button id="applyRangeButton" class="button cursor-pointer margin-left">適用</button>
+        </div>
+        <canvas id="chartCanvas" class="margin-top" width="1500" height="600"></canvas>
     </div>
 </body>
 

@@ -12,7 +12,7 @@ body {
     font-weight: 300;
 }
 
-.container {
+.container-column {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,9 +20,16 @@ body {
     padding: 10px;
 }
 
+.container-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
 .frame {
     width: 100dvw;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -40,7 +47,7 @@ body {
 }
 
 .setting-table th, td {
-    border: 1px solid #ccc;
+    border: 1px solid #bbb;
     padding: 5px;
 }
 
@@ -49,10 +56,43 @@ body {
     margin-top: 10px;
 }
 
+.margin-left {
+    margin-left: 10px;
+}
+
+.file-input {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.file-input::file-selector-button {
+    padding: 4px 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.875rem;
+}
+
+.file-input::before {
+    font-family: inherit;
+    font-size: inherit;
+}
+
 .button {
     padding: 4px 8px;
+    font-family: inherit;
+    font-size: 0.875rem;
+}
+
+.date-input{
+    padding: 4px 8px;
+    font-family: inherit;
+    font-size: 0.875rem;
 }
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
 }
